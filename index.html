@@ -1,52 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script defer src="index.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
 
-  <!-- Sign-up form start -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="section--initial">
+        <header class="section--initial__header">
+          <picture class="section--initial__header__picture">
+            <source
+              srcset="/assets/images/illustration-sign-up-desktop.svg"
+              alt="illustration-sign-up-desktop"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/illustration-sign-up-mobile.svg"
+              alt="illustration-sign-up-mobile"
+            />
+          </picture>
+        </header>
 
-  Stay updated!
+        <main class="section--initial__info">
+          <header class="section--initial__info__header">
+            <h1>Stay updated!</h1>
+          </header>
 
-  Join 60,000+ product managers receiving monthly updates on:
+          <section class="section--initial__info__text">
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="section--initial__info__text__list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </section>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+          <section>
+            <form action="submit" class="form" id="form-newsletter">
+              <label for="email" class="form__label">Email address</label>
+              <div class="form__error-message hidden">
+                <p class="form__error-message">Valid email required</p>
+              </div>
+              <input name="email" id="email" class="form__input" placeholder="email@company.com" required />
+              <button class="form__button" type="submit">Subscribe to monthly newsletter</button>
+            </form>
+          </section>
+        </main>
+      </section>
 
-  Email address
-  email@company.com
+      <section class="section--success hidden">
+        <header class="section--success__header">
+          <h1 class="section--success__header__text">Thanks for subscribing!</h1>
+        </header>
 
-  Subscribe to monthly newsletter
+        <main class="section--success__main">
+          <p class="section--success__main__text">
+            A confirmation email has been sent to ash@loremcompany.com. Please
+            open it and click the button inside to confirm your subscription.
+          </p>
+          <button class="section--success__main__button">Dismiss message</button>
+        </main>
+      </section>
+    </main>
 
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://purnamaa.dev">Purnama S Rahayu</a>.
+    </footer>
+  </body>
 </html>
