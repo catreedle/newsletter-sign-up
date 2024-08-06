@@ -6,6 +6,7 @@ const successSection = document.querySelector(".section--success");
 const initialSection = document.querySelector(".section--initial");
 
 const formInput = document.querySelector(".form__input");
+const submittedEmail = document.getElementById("submitted-email");
 
 function validateEmail(email) {
     const isValid = emailRegex.test(email);
@@ -34,6 +35,7 @@ function handleSubmit(e) {
     initialSection.classList.add("hidden");
     successSection.classList.remove("hidden");
     successSection.classList.add("show");
+    submittedEmail.textContent = email
   }
 }
 
