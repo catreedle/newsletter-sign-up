@@ -66,10 +66,43 @@ body {
   margin-block-end: 1rem;
 }
 
+.form__label-and-validation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .form__label {
-  display: block;
   font-weight: 700;
   margin-block: 0.5rem;
+}
+
+/* Keyframes for shaking animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form__error-message {
+  color: var(--color-primary-tomato);
+  font-weight: 700;
+}
+
+.form__error-message--invalid {
+  animation: shake 0.5s ease-in-out;
 }
 
 .form__input {
@@ -108,6 +141,53 @@ body {
     0 12px 20px var(--color-primary-tomato); /* Glow effect only below */
 }
 
+.section--success {
+  background-color: var(--color-white);
+  height: 100vh;
+  min-height: 600px;
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section--success__header h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-block: 1.5rem;
+}
+
+.section--success__main {
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--success__main__button {
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-charcoal-grey);
+  padding: 1rem;
+  font-weight: 700;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.section--success__main__button:hover {
+  background: linear-gradient(
+    to right,
+
+    hsl(4, 100%, 75%),
+    var(--color-primary-tomato),
+    hsl(4, 100%, 50%)
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+    0 12px 20px var(--color-primary-tomato); /* Glow effect only below */
+}
+
 .hidden {
   display: none;
 }
@@ -130,7 +210,8 @@ body {
     flex-direction: row-reverse;
     width: 100%;
     border-radius: 2rem;
-    max-width: 1200px;
+    max-width: 900px;
+    max-height: 700px;
   }
 
   .section--initial__header__picture img {
@@ -143,7 +224,29 @@ body {
     padding: 3rem;
   }
 
+  .section--initial__info__text__list li {
+    padding-inline-start: 2rem;
+    margin-block-end: 0.5rem;
+  }
+
   .form__button {
     font-size: 1rem;
+  }
+
+  .section--success {
+    width: 378px;
+    height: fit-content;
+    min-height: fit-content;
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  .section--success__header h1 {
+    margin-block: 0.5rem;
+  }
+
+  .section--success__main__button {
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 }
